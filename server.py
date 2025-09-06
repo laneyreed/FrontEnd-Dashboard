@@ -7,6 +7,10 @@ def home():
     return render_template("index.html")
 
 
+@app.route("/css")
+def css_home():
+    return render_template("css/css_home.html")
+
 
 if __name__ == "__main__":
     app.run(debug=True)
