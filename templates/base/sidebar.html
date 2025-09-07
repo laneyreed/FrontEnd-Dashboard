@@ -37,7 +37,10 @@
 <div id="sidebar">
     <div id="sidebar-logo" >
         <a href="{{ url_for('home')}}">
-            <img class="logo" src="static/images/fe-code-logo.png">
+            {% block logo %}
+                <img class="logo" src="static/images/fe-code-logo.png">
+            {% endblock %}
+
         </a>
     </div>
     <div id="sidebar-content" >
@@ -48,7 +51,7 @@
         <a href="#">{{ lang_concept_3 }}</a>
         <a href="#">{{ lang_concept_4 }}</a>
         <a href="#">{{ lang_concept_5 }}</a>
-        <a href="#">{{ lang_concept_6 }}</a>
+        <a href="{{ concept6_link }}">{{ lang_concept_6 }}</a>
         <a href="#">{{ lang_concept_7 }}</a>
     </div>
 </div>
